@@ -1,0 +1,3 @@
+GET https://api.example.com/users/123
+POST https://api.example.com/admin/users
+GET https://api.example.com/health

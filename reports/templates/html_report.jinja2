@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>API Scanner Report</title>
+  <style>
+    body{font-family:Arial,sans-serif;margin:32px;color:#17202a;background:#f7f9fb}
+    main{max-width:960px;margin:auto;background:white;padding:28px;border:1px solid #d8dee6}
+    h1{margin-top:0}.finding{border-left:5px solid #697386;padding:12px 16px;margin:14px 0;background:#fbfcfe}
+    .critical{border-color:#9b1c1c}.high{border-color:#c2410c}.medium{border-color:#ca8a04}.low{border-color:#2563eb}
+    code{background:#eef2f7;padding:2px 5px}
+  </style>
+</head>
+<body><main>
+  <h1>API Scanner Report</h1>
+  <p>Targets: {{ results.summary.targets }} | Findings: {{ results.summary.findings }} | Rules: {{ results.summary.rules }}</p>
+  {% for f in results.findings %}
+  <section class="finding {{ f.severity }}">
+    <h2>{{ f.rule_id }} - {{ f.title }}</h2>
+    <p><strong>Severity:</strong> {{ f.severity|upper }} | <strong>Target:</strong> <code>{{ f.target }}</code></p>
+    <p><strong>Evidence:</strong> {{ f.evidence }}</p>
+    <p><strong>Remediation:</strong> {{ f.remediation }}</p>
+  </section>
+  {% else %}
+  <p>No findings detected by the free rule set.</p>
+  {% endfor %}
+</main></body>
+</html>

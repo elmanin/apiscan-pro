@@ -1,0 +1,32 @@
+openapi: 3.0.3
+info:
+  title: Sample Indie API
+  version: 1.0.0
+paths:
+  /users/{id}:
+    get:
+      summary: User profile by id
+      responses:
+        "200":
+          description: User profile
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id: { type: string }
+                  email: { type: string }
+                  password: { type: string }
+                  api_key: { type: string }
+  /admin/users:
+    post:
+      summary: Create admin user
+      responses:
+        "201":
+          description: Created
+  /auth/login:
+    post:
+      summary: Login
+      responses:
+        "200":
+          description: Token

@@ -1,0 +1,12 @@
+scan:
+  timeout_seconds: 3
+  output:
+    json: scan-results.json
+    html: scan-report.html
+rules:
+  enabled:
+    - API1:2023
+    - API2:2023
+    - API3:2023
+    - API5:2023
+    - API8:2023
