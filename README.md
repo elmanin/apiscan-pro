@@ -61,11 +61,11 @@ Runtime: local machine only, no accounts, no hosted backend
 | Compliance packs | No | SOC 2 and PCI DSS outputs |
 | Example specs | 1 | 20+ specs and playbooks |
 
-## Upgrade to Pro on Bumblebee
+## Upgrade to Pro on Gumroad
 
 Need deeper coverage for client work, audits, or production release gates? API Scanner Pro is a paid downloadable package that still runs entirely on your machine or server. It adds all 15 OWASP API Top 10 checks, custom rules, PDF reports, professional templates, local scan history, batch scanning, advanced config, remediation snippets, SOC 2 and PCI DSS output packs, and 20+ bonus OpenAPI examples.
 
-Download Pro on Bumblebee: https://bumblebee.com/p/api-scanner-pro
+Download Pro on Gumroad: https://gumroad.com
 
 ## Development
 
