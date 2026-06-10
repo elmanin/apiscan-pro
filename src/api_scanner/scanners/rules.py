@@ -81,7 +81,7 @@ def _scan_static(target: dict[str, Any]) -> list[Finding]:
         out.append(_finding("API1:2023", "Broken Object Level Authorization", "critical", target_name,
                             "Object identifier route has no declared auth requirement.",
                             "Require authorization checks that bind object access to the caller."))
-    if any(word in path or word in schema for word in ("login", "password", "token")) and not target.get("security"):
+    if any(word in path for word in ("auth", "login", "password", "token")) and not target.get("security"):
         out.append(_finding("API2:2023", "Broken Authentication", "high", target_name,
                             "Authentication-related endpoint lacks declared security controls.",
                             "Add auth schemes, rate limiting, lockouts, and strict token handling."))

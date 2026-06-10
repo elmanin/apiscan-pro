@@ -7,7 +7,7 @@ The free GitHub version is fully usable on its own. It implements five high-sign
 ```text
 $ api-scanner --spec examples/sample_openapi.yaml --html-output report.html
 {
-  "summary": { "targets": 3, "findings": 6, "rules": 5 }
+  "summary": { "targets": 3, "findings": 7, "rules": 5 }
 }
 ```
 
